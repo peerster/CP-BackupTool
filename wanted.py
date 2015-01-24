@@ -37,11 +37,6 @@ def validateConf(config, section, item):
         elif item == 'api_key':
             raise Exception("No API key found in configfile")
 
-def writeConf(config, confFile):
-    with open(confFile, "w") as conf:
-        config.write(conf)
-    conf.close()
-
 def apiCall(url, verbose = True):
     if verbose:
         print "Opening URL:", url
